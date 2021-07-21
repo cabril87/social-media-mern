@@ -6,7 +6,8 @@ const morgan = require("morgan")
 const PORT = 4000
 const app = express();
 const userRoute = require("./routes/users")
-const userAuth = require("./routes/auth")
+const authRoute = require("./routes/auth")
+const postRoute = require("./routes/posts")
 
 dotenv.config()
 
@@ -21,7 +22,8 @@ app.use(helmet());
 app.use(morgan("common"))
 
 app.use("/api/users", userRoute)
-app.use("/api/auth", userAuth)
+app.use("/api/auth", authRoute)
+app.use("/api/posts", postRoute)
 
 
 
