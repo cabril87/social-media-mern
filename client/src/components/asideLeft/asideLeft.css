@@ -1,0 +1,58 @@
+.asideLeft-container{
+    flex: 3;
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(73, 82, 82);
+}
+::-webkit-scrollbar-thumb{
+   background-color: tomato;
+}
+.asideLeft-wrapper{
+    padding: 20px;
+
+}
+.asideLeft-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.asideLeft-list-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.asideLeft-icon{
+    margin-right: 15px;
+}
+.asideLeft-button{
+    width: 150px;
+    border: none;
+    padding: 10px;
+    color: white;
+    background-color: tomato;
+    border-radius: 5px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.asideLeft-friendlist{
+    padding: 0;
+    margin-top: 10px;
+    list-style-type: none;
+}
+.asideLeft-friend{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.asideLeft-friend-image{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}

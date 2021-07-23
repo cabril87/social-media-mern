@@ -22,6 +22,7 @@ const Header = () => {
                     <div className="header-link">Homepage</div>
                     <div className="header-link">Timeline</div>
                 </div>
+                <img src="https://images.unsplash.com/photo-1534375971785-5c1826f739d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" className="header-profile-picture" />
                 <div className="header-icons">
                     <div className="header-icon-item">
                         <IoPersonCircleSharp className="searchIcon"/>
@@ -36,7 +37,6 @@ const Header = () => {
                         <span className="header-icon-badge">1</span>
                     </div>
                 </div>
-                <img src="https://images.unsplash.com/photo-1534375971785-5c1826f739d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" className="header-profile-picture" />
             </div>
         </div>
     )
