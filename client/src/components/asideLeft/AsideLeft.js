@@ -41,8 +41,8 @@ const AsideLeft = () => {
                         <span className="asideLeft-list-item-text">Events</span>
                     </li>
                 </ul>
-                <hr />
                 <button className="asideLeft-button">Show More</button>
+                <hr />
                 <ul className="asideLeft-friendlist">
                     <li className="asideLeft-friend">
                         <img className="asideLeft-friend-image" src="https://images.unsplash.com/photo-1529335764857-3f1164d1cb24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=670&q=80" alt="spidey" />
