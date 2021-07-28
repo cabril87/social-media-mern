@@ -34,7 +34,8 @@
     border: none;
     padding: 10px;
     color: white;
-    background-color: tomato;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
     border-radius: 5px;
     font-weight: 500;
     margin: 10px 0;

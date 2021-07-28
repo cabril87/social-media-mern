@@ -4,7 +4,11 @@ import "./asideRight.css"
 const AsideRight = () => {
     return (
         <div className="asideRight-container">
-            aside right
+            <div className="asideRight-wrapper">
+                <div className="asideRight-birthday-container">
+                    <img src="" alt="" className="birthday-image" />
+                </div>
+            </div>
         </div>
     )
 }

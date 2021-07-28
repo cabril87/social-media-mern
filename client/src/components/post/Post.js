@@ -25,8 +25,9 @@ const Post = () => {
                     <div className="post-bottom-left">
                      
                         <img className="post-bottom-left-like-icon" src="assets/like.png" alt="like" />
-                        <img className="post-bottom-left-like-icon" src="assets/dislike.png" alt="dislike" />
-                        <img className="post-bottom-left-like-icon" src="assets/in-love.png" alt="love" />
+                       
+                       
+                        <img className="post-bottom-left-like-icon" src="assets/heart.png" alt="love" />
                         <span className="post-bottom-left-like-icon-counter">
                             32 people liked it
                         </span>

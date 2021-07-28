@@ -55,6 +55,7 @@ justify-content: space-between;
 .post-bottom-left{
 display: flex;
 align-items: center;
+justify-content: center;
 }
 .post-bottom-left-like-icon{
 width: 24px;
@@ -62,6 +63,12 @@ height: 24px;
 margin-right: 5px;
 cursor: pointer;
 }
+.post-bottom-left-love-icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    cursor: pointer;
+    }
 .post-bottom-left-like-icon-counter{
 font-size: 8px;
 }
