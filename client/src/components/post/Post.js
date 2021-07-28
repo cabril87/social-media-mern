@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./post.css"
 import { BiDotsVertical } from "react-icons/bi"
 import { Users } from "../../dummydata"
 
 
 const Post = ({post}) => {
+const [like, setLike] = useState(post.like)
+const [isLike, setIsLike] = useState(false)
 
+const likeHandler = (e) => {
+setLike(isLike ? like - 1 : like + 1)
+setIsLike(!isLike)
+}
 
     return (
         <div className="post-container">
@@ -27,12 +33,16 @@ const Post = ({post}) => {
                 <div className="post-bottom">
                     <div className="post-bottom-left">
                      
-                        <img className="post-bottom-left-like-icon" src="assets/like.png" alt="like" />
+                        <img 
+                        onClick={likeHandler}
+                        className="post-bottom-left-like-icon" src="assets/like.png" alt="like" />
                        
                        
-                        <img className="post-bottom-left-like-icon" src="assets/heart.png" alt="love" />
+                        <img 
+                        onClick={likeHandler}
+                        className="post-bottom-left-like-icon" src="assets/heart.png" alt="love" />
                         <span className="post-bottom-left-like-icon-counter">
-                            {post.like} people liked it
+                            {like} people liked it
                         </span>
                     </div>
                     <div className="post-bottom-right">
