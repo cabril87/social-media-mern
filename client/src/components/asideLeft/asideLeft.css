@@ -2,6 +2,8 @@
     flex: 3;
     height: calc(100vh - 50px);
     overflow-y: scroll;
+    position: sticky;
+    top: 50px;
 }
 ::-webkit-scrollbar{
     width: 5px;
@@ -40,20 +42,47 @@
     font-weight: 500;
     margin: 10px 0;
 }
+.asideLeft-hr{
+    height: 1px;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+.sideLeft-friends-container-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 800;
+}
 .asideLeft-friendlist{
     padding: 0;
-    margin-top: 10px;
+    margin: 10px;
     list-style-type: none;
-}
-.asideLeft-friend{
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+    
 }
-.asideLeft-friend-image{
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
+.asideLeft-friendslist-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.asideLeft-button-friend{
+   
+    width: 90px;
+    border: none;
+    padding: 10px;
+    color: white;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+  
 }

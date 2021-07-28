@@ -12,7 +12,7 @@ export const Users = [
     {
       id:3,
       profilePicture: "assets/person/3.jpeg",
-      username: "batman",
+      username: "Batman",
     },
     {
       id:4,

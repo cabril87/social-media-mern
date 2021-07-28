@@ -1,0 +1,23 @@
+.asideLeft-friend{
+    width: 45px;
+    
+    
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 5px;
+    justify-content: center;
+    text-align: center;
+}
+.asideLeft-friend-image{
+    height: 40px;
+    width: 40px;
+    border-radius: 20%;
+    object-fit: cover;
+    /* margin-right: 10px; */
+}
+.asideLeft-friend-name{
+    margin-top: 5px;
+    font-size: 8px;
+}

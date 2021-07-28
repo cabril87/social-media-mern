@@ -1,5 +1,26 @@
 .asideRight-container{
     flex: 3;
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+    position: sticky;
+    top: 50px;
+    direction: rtl;
+}
+.flipped{
+    direction:ltr;
+    padding: 13px;
+}
+::-webkit-scrollbar{
+    width: 5px;
+    
+}
+
+::-webkit-scrollbar-track{
+    background-color: black;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
 }
 .asideRight-wrapper{
     padding: 20px 20px 0 0;
@@ -29,34 +50,4 @@ font-size: 15px;
     padding: 0;
     margin: 0;
     list-style-type: none;
-}
-.asideRight-friend{
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-.asideRight-friend-image-container{
-   margin-right: 10px;
-   position: relative; 
-}
-.friend-image{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.friend-online{
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: chartreuse;
-    position: absolute;
-    top: -2;
-    right: 0;
-    border: 2px solid white
-
-}
-.friend-username{
-    font-weight: 500;
-
 }

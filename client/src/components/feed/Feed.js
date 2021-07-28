@@ -2,6 +2,7 @@ import React from 'react'
 import Post from '../post/Post'
 import Shared from '../shared/Shared'
 import "./feed.css"
+import { Posts } from "../../dummydata"
 
 
 const Feed = () => {
@@ -9,15 +10,12 @@ const Feed = () => {
         <div className="feed-container">
             <div className="feed-wrapper">
                 <Shared />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
+                {Posts.map((post) => {
+                   return <Post key={post.id} post={post}/>
+
+                })}
+                
+              
             </div>
         </div>
     )
