@@ -45,7 +45,14 @@ const AsideRight = ({ profile }) => {
                     <span className="asideRight-info-value">Scientist</span>
                 </div>
             </div>
-            <div className="asideRight-title"><b>User Friends</b></div>
+            <div className="asideRight-title">
+                <b>User Friends</b>
+            </div>
+            <div className="asideRight-followings">
+                <div className="asideRight-following">
+                    
+                </div>
+            </div>
             </>
         )
     }
