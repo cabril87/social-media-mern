@@ -1,55 +1,56 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./shared.css";
 import { MdPermMedia } from "react-icons/md";
 import { ImPriceTags } from "react-icons/im"
 import { IoLocation } from "react-icons/io5"
 import { HiEmojiHappy } from "react-icons/hi"
+import SharedOnline from '../sharedOnline/SharedOnline';
 import { Users } from '../../dummydata';
-import Online from '../online/Online';
+// import Online from '../online/Online';
 
 const Shared = () => {
-    const SharedOnline = ({ users }) => {
-        const [current, setCurrent] = useState(0);
-        const length = users.length;
+    // const SharedOnline = ({ users }) => {
+    //     const [current, setCurrent] = useState(0);
+    //     const length = users.length;
     
-        const nextSlide = () => {
-            setCurrent(current === length - 4 ? 0 : current + 1);
-        };
+    //     const nextSlide = () => {
+    //         setCurrent(current === length - 4 ? 0 : current + 1);
+    //     };
 
-        const prevSlide = () => {
-            setCurrent(current === 0 ? length - 4 : current - 1);
-        };
+    //     const prevSlide = () => {
+    //         setCurrent(current === 0 ? length - 4 : current - 1);
+    //     };
 
-        return (
-            <>
-                <div className="shared-carousel">
+    //     return (
+    //         <>
+    //             <div className="shared-carousel">
                    
-                    <img src="assets/left.png" alt="" className="carousel-icon" onClick={prevSlide} />
-                    <ul className="asideLeft-friendlist">
-                        {Users.map((user, index) => {
-                            return (
-                                <>
-                                    <div>
-                                        {index === current && <Online key={user.id} user={user} />}
-                                    </div>
-                                    <div>
-                                        {index === current + 1 && <Online key={user.id} user={user} />}
-                                    </div>
-                                    <div>
-                                        {index === current + 2 && <Online key={user.id} user={user} />}
-                                    </div>
-                                    <div>
-                                        {index === current + 3 && <Online key={user.id} user={user} />}
-                                    </div>
-                                </>
-                            )
-                        })}
-                    </ul>
-                    <img src="assets/right.png" alt="" className="carousel-icon" onClick={nextSlide} />
-                </div>
-            </>
-        )
-    }
+    //                 <img src="assets/left.png" alt="" className="carousel-icon" onClick={prevSlide} />
+    //                 <ul className="asideLeft-friendlist">
+    //                     {Users.map((user, index) => {
+    //                         return (
+    //                             <>
+    //                                 <div>
+    //                                     {index === current && <Online key={user.id} user={user} />}
+    //                                 </div>
+    //                                 <div>
+    //                                     {index === current + 1 && <Online key={user.id} user={user} />}
+    //                                 </div>
+    //                                 <div>
+    //                                     {index === current + 2 && <Online key={user.id} user={user} />}
+    //                                 </div>
+    //                                 <div>
+    //                                     {index === current + 3 && <Online key={user.id} user={user} />}
+    //                                 </div>
+    //                             </>
+    //                         )
+    //                     })}
+    //                 </ul>
+    //                 <img src="assets/right.png" alt="" className="carousel-icon" onClick={nextSlide} />
+    //             </div>
+    //         </>
+    //     )
+    // }
     const ShardedSearch = () => {
         return (
             <>
@@ -84,11 +85,12 @@ const Shared = () => {
     }
     return (
         <>
-            <div className="online-container">
+            {/* <div className="online-container">
                 <div className="online-wrapper">
                     <SharedOnline users={Users} />
                 </div>
-            </div>
+            </div> */}
+            
             <div className="shared-container">
                 <div className="shared-wrapper">
                     <ShardedSearch />

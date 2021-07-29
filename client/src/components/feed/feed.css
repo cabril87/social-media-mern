@@ -1,8 +1,15 @@
 .feed-container{
     flex: 5.5;
     background: rgb(2, 2, 2);
+    padding: 20px;
 }
+.
 .feed-wrapper{
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     
+}
+.flex-top{
+    position: sticky;
 }

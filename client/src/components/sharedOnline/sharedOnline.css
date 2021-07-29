@@ -1,0 +1,32 @@
+.online-container{
+    display: flex;
+    background: rgb(0, 0, 0);
+    border: none;
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+}
+.online-wrapper{
+    padding: 10px;
+    width: 100%;
+  
+}
+.asideRight-title{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.shared-carousel{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 5px;
+}
+.carousel-icon{
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
