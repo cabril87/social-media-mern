@@ -4,6 +4,9 @@
     overflow-y: scroll;
     position: sticky;
     top: 50px;
+    color: white;
+    background: rgb(131,58,180);
+    background: linear-gradient(175deg, rgba(131,58,180,1) 30%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 60%);
 }
 ::-webkit-scrollbar{
     width: 5px;
@@ -29,6 +32,8 @@
     margin-bottom: 20px;
 }
 .asideLeft-icon{
+    width: 30px;
+    height: 30px;
     margin-right: 15px;
 }
 .asideLeft-button{

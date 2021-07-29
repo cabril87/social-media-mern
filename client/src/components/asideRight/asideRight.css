@@ -4,7 +4,10 @@
     overflow-y: scroll;
     position: sticky;
     top: 50px;
+    color:white;
     direction: rtl;
+    /* background: rgb(131,58,180); */
+    background: linear-gradient(360deg, #833ab4 30%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 60%);
 }
 .flipped{
     direction:ltr;
@@ -50,4 +53,44 @@ font-size: 15px;
     padding: 0;
     margin: 0;
     list-style-type: none;
+}
+.asideRight-title{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.asideRight-info{
+    margin-bottom: 30px;
+}
+.asideRight-info-item{
+    margin-bottom: 10px;
+}
+.asideRight-info-key{
+    font-weight: 500;
+    margin-right: 15px;
+    color:#555
+}
+.asideRight-info-value{
+    font-weight: 500;
+}
+.asideRight-followings{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.asideRight-following{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.asideRight-following-image{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.asideRight-following-name{
+    font-size: 10px;
+    text-align: center;
 }

@@ -16,32 +16,28 @@ const AsideLeft = () => {
                 <ul className="asideLeft-list">
 
                     <li className="asideLeft-list-item">
-                        <SiFeedly className="asideLeft-icon" />
+                        <img src="assets/feed.png" alt="" className="asideLeft-icon" />
                         <span className="asideLeft-list-item-text">Feed</span>
                     </li>
                     <li className="asideLeft-list-item">
-                        <AiOutlineWechat className="asideLeft-icon" />
+                        <img src="assets/chats.png" alt="" className="asideLeft-icon" />
                         <span className="asideLeft-list-item-text">Chats</span>
                     </li>
                     <li className="asideLeft-list-item">
-                        <FaVideo className="asideLeft-icon" />
+                        <img src="assets/videos.png" alt="" className="asideLeft-icon" />
                         <span className="asideLeft-list-item-text">Videos</span>
                     </li>
                     <li className="asideLeft-list-item">
-                        <RiGroup2Fill className="asideLeft-icon" />
+                        <img src="assets/groups.png" alt="" className="asideLeft-icon" />
                         <span className="asideLeft-list-item-text">Groups</span>
                     </li>
                     <li className="asideLeft-list-item">
-                        <FaBookmark className="asideLeft-icon" />
+                        <img src="assets/bookmark.png" alt="" className="asideLeft-icon" />
                         <span className="asideLeft-list-item-text">Bookmarks</span>
                     </li>
                     <li className="asideLeft-list-item">
-                        <FaQuestionCircle className="asideLeft-icon" />
+                        <img src="assets/question.png" alt="" className="asideLeft-icon" />
                         <span className="asideLeft-list-item-text">Questions</span>
-                    </li>
-                    <li className="asideLeft-list-item">
-                        <MdEventAvailable className="asideLeft-icon" />
-                        <span className="asideLeft-list-item-text">Events</span>
                     </li>
                 </ul>
                 {/* <button className="asideLeft-button">Show More</button> */}

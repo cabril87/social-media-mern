@@ -1,6 +1,8 @@
 .feed-container{
     flex: 5.5;
+    background: rgb(2, 2, 2);
 }
 .feed-wrapper{
     padding: 20px;
+    
 }
