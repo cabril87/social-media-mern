@@ -1,42 +1,38 @@
 import React from 'react'
 import "./asideLeft.css"
-import { SiFeedly } from "react-icons/si"
-import { AiOutlineWechat } from "react-icons/ai"
-import { FaVideo, FaBookmark, FaQuestionCircle, FaDiscourse } from "react-icons/fa"
-import { RiGroup2Fill } from "react-icons/ri";
-import { MdWork, MdEventAvailable } from "react-icons/md"
 import Friends from '../friends/Friends'
 import { Users } from "../../dummydata"
 
 
 const AsideLeft = () => {
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER
     return (
         <div className="asideLeft-container">
             <div className="asideLeft-wrapper">
                 <ul className="asideLeft-list">
 
                     <li className="asideLeft-list-item">
-                        <img src="assets/feed.png" alt="" className="asideLeft-icon" />
+                        <img src={`${PF}feed.png`} alt="" className="asideLeft-icon" />
                         <span className="asideLeft-list-item-text">Feed</span>
                     </li>
                     <li className="asideLeft-list-item">
-                        <img src="assets/chats.png" alt="" className="asideLeft-icon" />
+                        <img src={`${PF}chats.png `}alt="" className="asideLeft-icon" />
                         <span className="asideLeft-list-item-text">Chats</span>
                     </li>
                     <li className="asideLeft-list-item">
-                        <img src="assets/videos.png" alt="" className="asideLeft-icon" />
+                        <img src={`${PF}videos.png`}alt="" className="asideLeft-icon" />
                         <span className="asideLeft-list-item-text">Videos</span>
                     </li>
                     <li className="asideLeft-list-item">
-                        <img src="assets/groups.png" alt="" className="asideLeft-icon" />
+                        <img src={`${PF}groups.png`} alt="" className="asideLeft-icon" />
                         <span className="asideLeft-list-item-text">Groups</span>
                     </li>
                     <li className="asideLeft-list-item">
-                        <img src="assets/bookmark.png" alt="" className="asideLeft-icon" />
+                        <img src={`${PF}bookmark.png`} alt="" className="asideLeft-icon" />
                         <span className="asideLeft-list-item-text">Bookmarks</span>
                     </li>
                     <li className="asideLeft-list-item">
-                        <img src="assets/question.png" alt="" className="asideLeft-icon" />
+                        <img src={`${PF}question.png`} alt="" className="asideLeft-icon" />
                         <span className="asideLeft-list-item-text">Questions</span>
                     </li>
                 </ul>

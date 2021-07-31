@@ -1,27 +1,35 @@
-import React from 'react'
+import React, { useEffect, useContext, useState } from 'react'
 import Post from '../post/Post'
 import Shared from '../shared/Shared'
+import axios from "axios"
+import { AuthContext } from "../../context/AuthContext";
 import "./feed.css"
-import { Posts, Users } from "../../dummydata"
-import SharedOnline from '../sharedOnline/SharedOnline'
 
+const Feed = ({ username }) => {
+    const [posts, setPosts] = useState([]);
+    const { user } = useContext(AuthContext);
 
-const Feed = () => {
+    useEffect(() => {
+        const fetchPosts = async () => {
+            const res = username
+                ? await axios.get("/posts/profile/" + username)
+                : await axios.get("posts/timeline/" + user._id);
+            setPosts(
+                res.data.sort((p1, p2) => {
+                    return new Date(p2.createdAt) - new Date(p1.createdAt);
+                })
+            );
+        };
+        fetchPosts();
+    }, []);
+
     return (
         <div className="feed-container">
             <div className="feed-wrapper">
-                <div className="feed-top">
-
-                    {/* <SharedOnline users={Users} className="online" /> */}
-                </div>
-                <div className="feed-bottom">
-                    <Shared />
-                    {Posts.map((post) => {
-                        return <Post key={post.id} post={post} />
-
-                    })}
-
-                </div>
+                {(!username || username === user.username) && <Shared />}
+                {posts.map((p) => (
+                    <Post key={p._id} post={p} />
+                ))}
 
 
             </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import "./online.css"
 
 const Online = ({ user }) => {
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
     return (
 
         <>
@@ -9,7 +10,7 @@ const Online = ({ user }) => {
 
             <li className="asideRight-friend">
                 <div className="asideRight-friend-image-container">
-                    <img src={user.profilePicture} alt="" className="friend-image" />
+                    <img src={PF + user.profilePicture} alt="" className="friend-image" />
                     <span className="friend-online"></span>
                 </div>
                 {/* <span className="friend-username">
