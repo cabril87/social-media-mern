@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon --experimental-modules --es-module-specifier-resolution=node index.js"
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,11 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.3",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.12"
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.12",
+    "validator": "^13.6.0"
   }
 }

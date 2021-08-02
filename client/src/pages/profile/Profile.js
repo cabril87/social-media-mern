@@ -5,18 +5,20 @@ import Feed from '../../components/feed/Feed'
 import AsideRight from '../../components/asideRight/AsideRight'
 import "./profile.css"
 import axios from 'axios'
+import { useParams } from "react-router";
 
 const Profile = () => {
     const [user, setUser] = useState({})
-    const PF = process.env.REACT_APP_PUBLIC_FOLDER
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+    const username = useParams().username;
 
     useEffect(() => {
         const fetchUser = async () => {
-            const res = await axios.get(`/users?username=Matt`)
-            setUser(res.data)
-        }
-        fetchUser()
-    }, [])
+          const res = await axios.get(`/users?username=${username}`);
+          setUser(res.data);
+        };
+        fetchUser();
+      }, [username]);
 
     return (
         <>
@@ -27,8 +29,24 @@ const Profile = () => {
                     <div className="profile-right-top">
                         <div className="profile-cover">
 
-                            <img className="profile-cover-picture" src={`${PF}post/3.jpeg`} alt="" />
-                            <img className="profile-user-picture" src={`${PF}person/7.jpeg`} alt="" />
+                            <img 
+                            className="profile-cover-picture" 
+                            src={
+                                user.coverPicture
+                                  ? PF + user.coverPicture
+                                  : PF + "person/noCover.png"
+                              }
+                            alt="" 
+                            />
+                            <img 
+                            className="profile-user-picture" 
+                            src={
+                                user.profilePicture
+                                  ? PF + user.profilePicture
+                                  : PF + "person/noAvatar.png"
+                              }
+                            alt="" 
+                            />
                         </div>
                         <div className="profile-info">
                             <div className="profile-info-name" ><b>{user.username}</b></div>
@@ -36,8 +54,8 @@ const Profile = () => {
                         </div>
                     </div>
                     <div className="profile-right-bottom">
-                        <Feed username={user}/>
-                        <AsideRight profile/>
+                        <Feed username={username}/>
+                        <AsideRight user={user}/>
                     </div>
                 </div>
             </div>

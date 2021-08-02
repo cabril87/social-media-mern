@@ -1,23 +1,28 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
+import isEmail from 'validator/lib/isEmail';
+
+
 
 const UserSchema = new mongoose.Schema({
-    username: {
-        type: String,
-        require: true,
-        min: 3,
-        max:20,
-        unique: true,
-    },
     email: {
         type: String,
-        require: true,
+        required: [true, 'Please enter an email'],
         max: 50, 
         unique: true,
+        lowercase: true,
+        validate: [isEmail, 'Please enter a valid email']
     },
     password: {
         type: String,
-        require: true,
-        min: 6,
+        required: [true, 'Please enter a password'],
+        minlength: [6, ' Minimum password length is 6 characters'],
+    },
+    username: {
+        type: String,
+        required: [true, 'Please enter username'],
+        min: [3, ' Minimum username length is 6 characters'],
+        max:[20, ' Maximum username length is 20 characters'],
+        unique: true,
     },
     profilePicture:{
         type: String,
@@ -60,4 +65,4 @@ const UserSchema = new mongoose.Schema({
 {timestamps:true}
 );
 
-module.exports = mongoose.model("User", UserSchema)
+export default mongoose.model("User", UserSchema)

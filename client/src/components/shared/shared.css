@@ -131,3 +131,22 @@
    
     
 }
+.share-img-container{
+    padding: 0 20px 10px 20px;
+    position: relative;
+  }
+  
+  .share-img{
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .share-cancel-img{
+    width: 20px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  

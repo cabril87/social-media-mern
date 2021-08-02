@@ -64,12 +64,19 @@
     text-align: center;
     /* color: rgba(131,58,180); */
 }
+.login-button-register-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
 .login-button-register{
     width: 60%;
-    align-self: center;
+    /* align-self: center; */
     height: 50px;
     border-radius: 5px;
     border: none;
+    
     /* background: rgb(131,58,180);
     background: linear-gradient(300deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); */
     /* background: #1775ee; */

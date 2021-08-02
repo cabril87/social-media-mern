@@ -2,8 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import { Users } from "../../dummydata";
-import Online from "../online/Online";
+
 import "./asideRight.css"
 
 
@@ -87,24 +86,25 @@ const AsideRight = ({ user }) => {
                     <b>User Friends</b>
                 </div>
                 <div className="asideRight-followings">
-                    <div className="asideRight-following">
-                        <img src={`${PF}person/1.jpeg`} alt="" className="asideRight-following-image" />
-                        <span className="asideRight-following-name">
-                            Batman
-                        </span>
-                    </div>
-                    <div className="asideRight-following">
-                        <img src={`${PF}person/2.jpeg `} alt="" className="asideRight-following-image" />
-                        <span className="asideRight-following-name">
-                            Batman
-                        </span>
-                    </div>
-                    <div className="asideRight-following">
-                        <img src={`${PF}person/3.jpeg`} alt="" className="asideRight-following-image" />
-                        <span className="asideRight-following-name">
-                            Batman
-                        </span>
-                    </div>
+                    {friends.map((friend) => (
+                        <Link
+                            to={"/profile/" + friend.username}
+                            style={{ textDecoration: "none" }}
+                        >
+                            <div className="asideRight-following">
+                                <img
+                                    src={
+                                        friend.profilePicture
+                                            ? PF + friend.profilePicture
+                                            : PF + "person/no-avatar.png"
+                                    }
+                                    alt=""
+                                    className="asideRight-following-image"
+                                />
+                                <span className="asideRight-following-name">{friend.username}</span>
+                            </div>
+                        </Link>
+                    ))}
                 </div>
             </>
         )

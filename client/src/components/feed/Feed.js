@@ -21,7 +21,7 @@ const Feed = ({ username }) => {
             );
         };
         fetchPosts();
-    }, []);
+    }, [username, user._id]);
 
     return (
         <div className="feed-container">

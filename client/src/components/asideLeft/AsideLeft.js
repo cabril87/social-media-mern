@@ -38,7 +38,7 @@ const AsideLeft = () => {
                 </ul>
                 {/* <button className="asideLeft-button">Show More</button> */}
                 <hr className="asideLeft-hr" />
-                <div className="asideLeft-friends-container">
+                {/* <div className="asideLeft-friends-container">
 
                     <div className="sideLeft-friends-container-title">Friends</div>
                     <ul className="asideLeft-friendlist">
@@ -53,7 +53,7 @@ const AsideLeft = () => {
                         <button className="asideLeft-button-friend">Show More</button>
 
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
